@@ -61,7 +61,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
 }
 
 resource akv 'Microsoft.KeyVault/vaults@2022-07-01' = {
-  name: akvName
+  name: akvName2
   location: location
   properties: {
     sku: {
