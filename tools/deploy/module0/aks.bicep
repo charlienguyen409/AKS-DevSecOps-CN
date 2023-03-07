@@ -6,7 +6,7 @@ param dnsPrefix string = resourceGroup().name // name is obtained from env
 param clusterName string = 'devsecops-aks'
 
 @description('The unique name for the Azure Key Vault.')
-param akvName string = 'akv-${uniqueString(resourceGroup().id)}'
+param akvName string = 'akv-cn'
 
 
 // Optional params
@@ -61,7 +61,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
 }
 
 resource akv 'Microsoft.KeyVault/vaults@2022-07-01' = {
-  name: akvName2
+  name: akvName
   location: location
   properties: {
     sku: {
